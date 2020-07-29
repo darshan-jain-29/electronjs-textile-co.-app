@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="../../../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../../../assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+  <div id="headData"></div>
+
+<body onload="loadbillNumber()">
+  <div class="wrapper">
+    <!-- <div class="sidebar" data-color="purple" data-image="/assets/img/sidebar-2.jpg"> -->
+
+    <div>
+      <div id="sideBarDiv"></div>
+      <p id="waitingMessage" class="waitingMessage">Loading..Please Wait..</p>
+    </div>
+
+    <div class="main-panel">
+      <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid p-L1">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+            </button>
+            <a class="navbar-brand" id="pageHeading">New Finish P. O. Form </a>
+          </div>
+          <div class="collapse navbar-collapse"></div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="container-fluid p-L1">
+          <div class="row rRLM p-T5">
+            <div class="col-md-12 p-R5">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="col-md-2">
+                    <label>P. O. No.</label>
+                    <input type="text" class="form-control" placeholder="P. O. No." id="billNumber" disabled />
+                  </div>
+                  <div class="col-md-2">
+                    <label>Date of P. O.</label>
+                    <input type="date" class="form-control" id="dateOFinishPO" autofocus />
+                  </div>
+                  <div class="col-md-2">
+                    <label>Exp. Date of Delivery</label>
+                    <input type="date" class="form-control" id="dateODeliveryPO" />
+                  </div>
+                  <div class="col-md-3">
+                    <label>Party Name</label>
+                    <select class="form-control" id="purchasePartyName">
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <label>Broker</label>
+                    <select class="form-control" id="brokerName">
+                    </select>
+                  </div>
+                  <div class="col-md-1">
+                    <label>Lot No.</label>
+                    <input type="text" class="form-control" placeholder="Lot Number" id="lotNumber" />
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row rRLM">
+                  <div style="text-align: center; font-size: 1.3em;">
+                    <b>P. O. Details</b>
+                  </div>
+                </div>
+                <div class="row rRLM p-R5">
+                  <div class="content table-responsive table-full-width">
+                    <table class="table table-hover table-striped" id="poDetailsTable" style="margin-bottom: 0px;">
+                      <thead>
+                        <tr>
+                          <th class="col-md-3">Quality</th>
+                          <th class="col-md-2">Shade</th>
+                          <!-- <th class="col-md-2">Condition</th> -->
+                          <th class="col-md-2">Total Qty</th>
+                          <th class="col-md-2">Rate/m</th>
+                          <th class="col-md-2">Amt</th>
+                          <th class="col-md-1"></th>
+                        </tr>
+                      </thead>
+                      <tbody id="poDetailsTableBody">
+                        <tr>
+                          <td>
+                            <select class="form-control inputProgramCardWithColMd" id="tableQuality1">
+                              <!-- onchange="checkDuplicateQSCC()"> -->
+                            </select>
+                          </td>
+                          <td>
+                            <select class="form-control inputProgramCardWithColMd" id="tableShade1">
+                              <!-- onchange="checkDuplicateQSCC()"> -->
+                            </select>
+                          </td>
+                          <!-- <td>
+                            <select class="form-control inputProgramCardWithColMd" id="tableCondition1"
+                              onchange="checkDuplicateQSCC()">
+                            </select>
+                          </td> -->
+                          <td>
+                            <input type="number" id="tableRowQty1" class="form-control inputProgramCardWithColMd"
+                              onchange="calculateTableTotal()" placeholder="Order Qty" />
+                          </td>
+                          <td>
+                            <input type="number" id="tableRowRate1" class="form-control inputProgramCardWithColMd"
+                              onchange="calculateTableTotal()" placeholder="Rate/m" />
+                          </td>
+                          <td>
+                            <input type="number" id="rowAmt1" class="form-control inputProgramCardWithColMd" disabled />
+                          </td>
+                          <td>
+                            <input type="image" onclick="addTableRows()" id="addButton1" title="Add New Row"
+                              src="../../../../assets/img/addld.png" class="imageButton" />
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <th></th>
+                        <!-- <th></th> -->
+                        <th>Total</th>
+                        <th>
+                          <input type="number" id="totalQty" class="form-control inputProgramCardWithColMd" value="0"
+                            disabled />
+                        </th>
+                        <th></th>
+                        <th>
+                          <input type="number" id="totalNetAmt" class="form-control inputProgramCardWithColMd" value="0"
+                            disabled />
+                        </th>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="row rRLM p-R5">
+                  <div class="content table-responsive table-full-width">
+                    <table class="table table-hover table-striped" id="weftTable" style="margin-bottom: 0px;">
+                      <tfoot>
+
+                        <th class="footerCardEntry col-md-12">
+                          <input id="saveButton" type="button" class="btn btn-success btn-fill view" style="width: 15%;"
+                            value="Save" onclick="savePODetails()" />
+                          <input id="resetButton" type="button" class="btn btn-danger btn-fill view" value="Reset"
+                            onclick="window.location.reload()" />
+                        </th>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<!--   Core JS Files   -->
+<script src="../../../common/commonCode.js"></script>
+<script src="../../../common/createInvoiceStyle2.js"></script>
+<script src="../../../common/stickerPrintingHelper.js"></script>
+<script src="../../../../assets/js/jquery.3.2.1.min.js" onload="window.$=window.jQuery=module.exports;"></script>
+<script src="../../../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="newFinishPO.js"></script>
+
+<div id="footer"></div>
+<script>
+  $(function () {
+    $("#footer").load("../../../footer/footer.html");
+  });
+</script>
+
+</html>

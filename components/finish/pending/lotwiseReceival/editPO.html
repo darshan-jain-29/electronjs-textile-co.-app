@@ -1,0 +1,183 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-2" style="padding-left:5px">
+                        <label style="padding-left: 15px;">Design Name</label>
+                        <input type="text" class="form-control" placeholder="Design Name" id="designName" autofocus
+                            onchange="checkIfDesignNameExist(oldValue)" />
+                    </div>
+                    <div class="col-md-2">
+                        <label style="padding-left: 15px;">Date of Creation</label>
+                        <input type="date" class="form-control" id="dateOfCreation" />
+                    </div>
+                    <div class="col-md-2">
+                        <label style="padding-left: 15px;">Reed Count</label>
+                        <input type="number" class="form-control" placeholder="Reed Count" id="reedCount" />
+                    </div>
+                    <div class="col-md-2">
+                        <label style="padding-left: 15px;">Picks</label>
+                        <input type="number" class="form-control" placeholder="Picks" id="picks" />
+                    </div>
+                    <div class="col-md-2">
+                        <label style="padding-left: 15px;">Reed Space</label>
+                        <input type="number" class="form-control" placeholder="Reed Space" id="reedSpace"
+                            onchange="findRowNetWt('weftTable')" />
+                    </div>
+                    <div class="col-md-2 p-R5">
+                        <label style="padding-left: 15px;">Tape Length</label>
+                        <input type="number" class="form-control" placeholder="Tape Length" id="tapeLength"
+                            onchange="findRowNetWt(null)" />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>WARP Grey </b>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="warpTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th>Quality</th>
+                                    <th>Denier</th>
+                                    <th>Shade No</th>
+                                    <th>Color</th>
+                                    <th>No. of Ends</th>
+                                    <th>Net Wt.</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="warpTableBody"></tbody>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>Total Warp Wt.</th>
+                                <th>
+                                    <input type="number" id="warpTotalWt" class="form-control inputProgramCardWidth7em"
+                                        value="0" disabled />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>WEFT Grey </b>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="weftTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th>Quality</th>
+                                    <th>Denier</th>
+                                    <th>Shade No</th>
+                                    <th>Color</th>
+                                    <th>No. of Picks</th>
+                                    <th>Net Wt.</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="weftTableBody"></tbody>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>Total Weft Wt.</th>
+                                <th>
+                                    <input type="number" id="weftTotalWt" class="form-control inputProgramCardWidth7em"
+                                        value="0" disabled />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="weftTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th class="footerCardEntry">
+                                    <div class="p-T5 p-R3">
+                                        Total Net Wt.
+                                    </div>
+                                    <input type="number" id="totalNetWt" class="form-control inputProgramCardWidth7em"
+                                        value="0" disabled />
+                                </th>
+                                <th></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="weftTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th class="footerCardEntry">
+                                    <input id="updateButton" type="button"
+                                        class="btn btn-success btn-fill buttonPadding" value="Update"
+                                        onclick="saveCardDetails()" /><input id="deleteButton" type="button"
+                                        class="btn btn-danger btn-fill buttonPadding" value="Delete Card"
+                                        onclick="deleteCardDetails(oldValue, true)" />
+                                </th>
+                                <th></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="editCard.html"></script>
+
+</html>

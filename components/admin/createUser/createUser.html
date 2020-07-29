@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+  <div id="headData"></div>
+
+<body>
+  <div class="wrapper">
+    <!-- <div class="sidebar" data-color="purple" data-image="/assets/img/sidebar-2.jpg"> -->
+    <div>
+      <div id="sideBarDiv"></div>
+      <p id="waitingMessage" class="waitingMessage">Loading..Please Wait..</p>
+    </div>
+
+    <div class="main-panel">
+      <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid p-L1">
+          <div class="navbar-header">
+            <a class="navbar-brand">Create & Edit Users</a>
+          </div>
+          <ul class="nav navbar-nav navbar-right" id="searchBoxUl" hidden>
+            <li style="padding-top: 10px; padding-right: 15px;">
+              <input type="text" class="form-control" placeholder="Search Products" id="searchBox"
+                onkeyup="searchInTable()" />
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <form id="superUserDetailsForm">
+        <h4 style="padding-left: 18px;">
+          Enter super user credentials to proceed ahead.
+        </h4>
+        <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+          <div class="col-md-4">
+            <label style="padding-left: 15px;">Superuser ID</label>
+            <input type="text" class="form-control" placeholder="Superuser Username" id="username" autofocus />
+          </div>
+          <div class="col-md-4">
+            <label style="padding-left: 15px;">Superuser Password</label>
+            <input type="text" class="form-control" placeholder="Superuser Password:" id="password" />
+          </div>
+          <div class="col-md-4" style="padding-top: 24px;">
+            <input type="button" class="btn btn-success btn-fill" id="shade" value="Submit"
+              onclick="checkCredentialsOfSuperUser()" />
+            <input type="button" class="btn btn-info btn-fill" value="Reset" onclick="resetErrorMessage()" />
+          </div>
+        </div>
+        <div style="text-align: center;" hidden id="errorMessage">
+          <label style="color: red; font-size: 1.4em">Incorrect credentials. Please try again.</label>
+        </div>
+      </form>
+      <div id="userDetailsDiv" hidden>
+        <form>
+          <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+            <div class="col-md-3">
+              <label style="padding-left: 15px;">User Name</label>
+              <input type="text" class="form-control" placeholder="User Name" id="newUsername" autofocus
+                onchange="checkIfUserExist();" />
+            </div>
+            <div class="col-md-3">
+              <label style="padding-left: 15px;">Password</label>
+              <input type="text" class="form-control" placeholder="Password" id="newPassword" />
+            </div>
+            <div class="col-md-3">
+              <label style="padding-left: 15px;">Can Edit Stock?</label>
+              <select class="browser-default form-control" id="editStatus">
+                <option value="" disabled selected>Please select one option</option>
+                <option value="1">YES</option>
+                <option value="2">NO</option>
+              </select>
+            </div>
+            <div class="col-md-1" style="padding-top: 25px; padding-right: 15px;">
+              <input type="button" class="btn btn-primary btn-fill" id="addRow" value="Add"
+                onclick="addValuesToDatabase();" />
+            </div>
+          </div>
+        </form>
+        <div class="content table-responsive">
+          <table class="table table-hover table-striped" id="userTable">
+            <thead>
+              <tr>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Can Edit Master?</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="userTableBody"></tbody>
+            <tfoot>
+              <tr>
+                <th>User Name</th>
+                <th>Password</th>
+                <th>Can Edit Master?</th>
+                <th></th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="createUser.js"></script>
+<script src="/components/common/databaseConnectivity.js"></script>
+<!--   Core JS Files   -->
+<script src="../../assets/js/jquery.3.2.1.min.js" onload="window.$=window.jQuery=module.exports;"></script>
+<script src="/assets/js/bootstrap.min.js" type="text/javascript"></script>
+<!--  Notifications Plugin    -->
+<script src="/assets/js/bootstrap-notify.js"></script>
+
+</html>

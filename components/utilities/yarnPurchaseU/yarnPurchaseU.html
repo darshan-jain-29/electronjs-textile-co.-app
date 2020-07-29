@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="../../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../../assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+  <div id="headData"></div>
+
+<body onload="loadValuesInTables()">
+  <div class="wrapper">
+    <!-- <div class="sidebar" data-color="purple" data-image="../../../assets/img/sidebar-2.jpg"> -->
+    <div>
+      <div id="sideBarDiv"></div>
+      <p id="waitingMessage" class="waitingMessage">Loading..Please Wait..</p>
+    </div>
+
+    <div class="main-panel">
+      <nav class="navbar navbar-default navbar-fixed">
+        <div class="container-fluid p-L1">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand">Utilities - Grey Purchase</a>
+          </div>
+          <div class="collapse navbar-collapse"></div>
+        </div>
+      </nav>
+      <div class="content">
+        <div class="container-fluid p-L1">
+          <div class="row rRLM p-T5">
+            <div class="col-md-5">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Quality Name</p>
+                  <div class="col-md-10" style="padding-left:5px">
+                    <input type="text" class="form-control" placeholder="Quality Name" id="qualityName" autofocus
+                      onchange="checkIfValueExist(this, 'qualityTableBody')" />
+                  </div>
+                  <div class="col-md-2 p-L5">
+                    <input type="button" class="btn btn-primary btn-fill add" id="addRowQuality" value="Add"
+                      onclick="addValueToDatabase(this, 'qualityTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <tbody id="qualityTableBody"></tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Shade No.</p>
+                  <div class="col-md-9" style="padding-left:5px">
+                    <input type="text" class="form-control" placeholder="Shade No." id="shadeNo" name="shadeNo"
+                      onchange="checkIfValueExist(this, 'shadeTableBody')" />
+                  </div>
+                  <div class="col-md-3 p-L5">
+                    <input type="button" class="btn btn-primary btn-fill add" id="addRowShade" value="Add"
+                      onclick="addValueToDatabase(this, 'shadeTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th>Shade No</th>
+                        </tr>
+                      </thead>
+                      <tbody id="shadeTableBody"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Shade No</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Color</p>
+                  <div class="col-md-9" style="padding-left:5px">
+                    <input type="text" class="form-control" placeholder="Color Name" id="color" name="color"
+                      onchange="checkIfValueExist(this, 'colorTableBody')" />
+                  </div>
+                  <div class="col-md-3 p-L5">
+                    <input type="button" class="btn btn-primary btn-fill add" id="addRowColor" value="Add"
+                      onclick="addValueToDatabase(this, 'colorTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th>Color</th>
+                        </tr>
+                      </thead>
+                      <tbody id="colorTableBody"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th>Color</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Grey Party Name Details -->
+          <div class="row rRLM p-T5">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Grey Purchase Party Name</p>
+                  <div class="col-md-3" style="padding-left:5px">
+                    <label class="p-L5">Party Name</label>
+                    <input type="text" class="form-control" placeholder="New Party Name" id="partyName"
+                      onchange="checkIfPartyNameExist(this.value,'partyNameTableBody')" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">GST No.</label>
+                    <input type="text" class="form-control" placeholder="GST No." id="gstNo" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">Select State</label>
+                    <select class="form-control" id="states"></select>
+                  </div>
+                  <div class="col-md-1" style="padding-left:5px">
+                    <label class="p-L5">Code</label>
+                    <input type="text" class="form-control" placeholder="Code" id="code" />
+                  </div>
+                  <div class="col-md-3" style="padding-left:5px">
+                    <label class="p-L5">Email</label>
+                    <input type="text" class="form-control" placeholder="Email ID" id="emailId">
+                  </div>
+                  <div class="col-md-6" style="padding-left:5px">
+                    <label class="p-L5">Address</label>
+                    <input type="text" class="form-control" placeholder="Address" id="address" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">Grey deliery cycle</label>
+                    <select class="form-control" id="deliveryCycle">
+                    </select>
+                  </div>
+                  <div class="col-md-1 p-L5 m-T24">
+                    <input type="button" class="btn btn-primary btn-fill add" value="Add"
+                      onclick="addPartyToDatabase(this,'partyNameTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th class="col-md-3">Party Name</th>
+                          <th class="col-md-3">GST No.</th>
+                          <th class="col-md-3">Email Id</th>
+                          <th class="col-md-3">Delivery Cycle</th>
+                        </tr>
+                      </thead>
+                      <tbody id="partyNameTableBody"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="col-md-3">Party Name</th>
+                          <th class="col-md-3">GST No.</th>
+                          <th class="col-md-3">Email Id</th>
+                          <th class="col-md-3">Delivery Cycle</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dyeing Name Details -->
+          <div class="row rRLM p-T5">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Dyeing Names</p>
+                  <div class="col-md-3" style="padding-left:5px">
+                    <label class="p-L5">Dyeing Name</label>
+                    <input type="text" class="form-control" placeholder="New Dyeing Name" id="dyeingName"
+                      onchange="checkIfPartyNameExist(this.value, 'dyeingNameTableBody')" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">GST No.</label>
+                    <input type="text" class="form-control" placeholder="GST No." id="dyeingGstNo" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">Select State</label>
+                    <select class="form-control" id="states"></select>
+                  </div>
+                  <div class="col-md-1" style="padding-left:5px">
+                    <label class="p-L5">Code</label>
+                    <input type="text" class="form-control" placeholder="Code" id="code" />
+                  </div>
+                  <div class="col-md-3" style="padding-left:5px">
+                    <label class="p-L5">Email</label>
+                    <input type="text" class="form-control" placeholder="Email ID" id="emailId">
+                  </div>
+                  <div class="col-md-6" style="padding-left:5px">
+                    <label class="p-L5">Address</label>
+                    <input type="text" class="form-control" placeholder="Address" id="address" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">Deliery cycle</label>
+                    <select class="form-control" id="deliveryCycle">
+                    </select>
+                  </div>
+                  <div class="col-md-1 p-L5 m-T24">
+                    <input type="button" class="btn btn-primary btn-fill add" value="Add"
+                      onclick="addPartyToDatabase(this, 'dyeingNameTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th class="col-md-3">Dyeing Name</th>
+                          <th class="col-md-3">GST No.</th>
+                          <th class="col-md-3">Email Id</th>
+                          <th class="col-md-3">Delivery Cycle</th>
+                        </tr>
+                      </thead>
+                      <tbody id="dyeingNameTableBody"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="col-md-3">Dyeing Name</th>
+                          <th class="col-md-3">GST No.</th>
+                          <th class="col-md-3">Email Id</th>
+                          <th class="col-md-3">Delivery Cycle</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Broker Name Details -->
+          <div class="row rRLM p-T5">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <p class="m-B0">Broker Names</p>
+                  <div class="col-md-3" style="padding-left:5px">
+                    <label class="p-L5">Broker Name</label>
+                    <input type="text" class="form-control" placeholder="New Broker Name" id="brokerName"
+                      onchange="checkIfPartyNameExist(this.value, 'brokerNameTableBody')" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">GST No.</label>
+                    <input type="text" class="form-control" placeholder="GST No." id="brokeGstNo" />
+                  </div>
+                  <div class="col-md-2" style="padding-left:5px">
+                    <label class="p-L5">Email</label>
+                    <input type="text" class="form-control" placeholder="Email ID" id="emailId">
+                  </div>
+                  <div class="col-md-4" style="padding-left:5px">
+                    <label class="p-L5">Address</label>
+                    <input type="text" class="form-control" placeholder="Address" id="address" />
+                  </div>
+                  <div class="col-md-1 p-L5 m-T24">
+                    <input type="button" class="btn btn-primary btn-fill add" value="Add"
+                      onclick="addPartyToDatabase(this, 'brokerNameTableBody');" />
+                  </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                  <div class="content table-responsive table-full-width tableScroll">
+                    <table class="table table-hover table-striped">
+                      <thead>
+                        <tr>
+                          <th class="col-md-4">Broker Name</th>
+                          <th class="col-md-4">GST No.</th>
+                          <th class="col-md-4">Email Id</th>
+                        </tr>
+                      </thead>
+                      <tbody id="brokerNameTableBody"></tbody>
+                      <tfoot>
+                        <tr>
+                          <th class="col-md-4">Broker Name</th>
+                          <th class="col-md-4">GST No.</th>
+                          <th class="col-md-4">Email Id</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../../common/commonCode.js"></script>
+<script src="../../../assets/js/jquery.3.2.1.min.js" onload="window.$=window.jQuery=module.exports;"></script>
+<script src="../../../assets/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="yarnPurchaseU.js"></script>
+<!--   Core JS Files   -->
+<div id="footer"></div>
+<script>
+  $(function () {
+    $("#footer").load("../../footer/footer.html");
+  });
+</script>
+</head>
+
+</html>

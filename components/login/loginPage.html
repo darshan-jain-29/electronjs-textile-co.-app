@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link href="../../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../../assets/css/light-bootstrap-dashboard.css?v=1.4.0" rel="stylesheet" />
+  <div id="headData"></div>
+
+<body class="wrapper">
+  <div class="main-panel">
+    <div class="content">
+      <div class="container-fluid p-L1" style="padding-top: 18px; padding-left: 15px; ">
+        <div class="card">
+          <div class="header">
+            <h4 class="title" style="text-align: center;">Login Page</h4>
+          </div>
+          <form>
+            <div class="row rRLM">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label style="padding-left: 20px;">Username</label>
+                  <input style="padding-left: 20px; margin-left:20px; width: 89%; text-align: left;" type="text"
+                    class="form-control" placeholder="User Name" id="usrname" name="username" autofocus />
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <label style="padding-left: 20px;">Password</label>
+                  <input style="padding-left: 20px; margin-left:20px; width: 89%; text-align: left;" type="password"
+                    class="form-control" placeholder="Password" id="psword" name="psword" />
+                </div>
+              </div>
+              <div class="col-md-2">
+                <div class="form-group">
+                  <input style="padding-left: 20px; margin:auto; display:block;" type="button"
+                    class="btn btn-primary btn-fill" value="Login" onclick="checkLoginDetails();" />
+                  <p style="text-align: center; padding-top: 3px; color: red;" id="errorMessage" hidden>
+                    Incorrect login credentials</p>
+                  <p style=" text-align: center; padding-top: 3px; color: green;" id="waitingMessageLogin" hidden>
+                    Checking User Credentials & Connecting.. Please Wait..</p>
+                  <p style="text-align: center; padding-top: 3px; color: red;" id="serverFailure" hidden>
+                    ERROR: Server is down. Please start the server PC and then restart the application.</p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script src="loginPage.js"></script>
+<script src="../common/commonCode.js"></script>
+<!-- <script src="../common/databaseConnectivity.js"></script> -->
+<!--   Core JS Files   -->
+<script src="../../assets/js/jquery.3.2.1.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+</head>
+
+</html>

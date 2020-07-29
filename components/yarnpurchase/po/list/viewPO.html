@@ -1,0 +1,99 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-2">
+                        <label>P.O. No.</label>
+                        <input type="text" class="form-control" placeholder="P.O. Number" id="viewPONumber" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Dt. of Pur.</label>
+                        <input type="text" class="form-control" placeholder="Date of P.O. Issue" id="viewDateOfPOIssue"
+                            disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="p-L5">Grey Party</label>
+                        <input type="text" class="form-control" placeholder="Party Name" id="viewYarnPartyName"
+                            disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="p-L5">Dyeing</label>
+                        <input type="text" class="form-control" placeholder="Dyeing Name" id="viewDyeingName"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Broker</label>
+                        <input type="text" class="form-control" placeholder="Broker Name" id="viewBrokerName"
+                            disabled />
+                    </div>
+                    <!-- <div class="col-md-1">
+                        <label class="p-L5">Lot No.</label>
+                        <input type="text" class="form-control" placeholder="Lot Number" id="viewLotNumber" />
+                    </div>
+                    <div class="col-md-1">
+                        <input type="button" class="btn btn-danger btn-fill receieve m-L5 m-T26"
+                            title="Click to save the Lot No" id="saveButton" value="Save" onclick="" />
+                    </div> -->
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>Grey Purchase Details </b>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewPoDetailsTable"
+                            style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-3">Quality</th>
+                                    <!-- <th class="col-md-2">Shade No</th>
+                                    <th class="col-md-2">Color</th> -->
+                                    <th class="col-md-2">Rolls</th>
+                                    <th class="col-md-3">Net Qty</th>
+                                    <th class="col-md-2">Rate/m</th>
+                                    <th class="col-md-2">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody id="viewPoDetailsTableBody">
+                            </tbody>
+                            <tfoot>
+                                <th>Total</th>
+                                <th id="viewTotalNoOfRolls">0</th>
+                                <th id="viewTotalNetQty">0</th>
+                                <th>
+                                </th>
+                                <th id="viewTotalNetAmt">0</th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" style="margin-bottom: 0px;">
+                            <tfoot>
+                                <th class="col-md-12 footerCardEntry">
+                                    <input id="editButton" type="button" class="btn btn-secondary btn-fill view"
+                                        value="Edit Order"
+                                        onclick="alert('Edit Option is available only for Admin User.. Coming soon...')" />
+                                    <input id="printButton" type="button" class="btn btn-success btn-fill view"
+                                        value="Print" onclick="printInvoideData()" />
+                                </th>
+                                <th></th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

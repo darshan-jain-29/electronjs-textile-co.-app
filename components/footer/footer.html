@@ -1,0 +1,34 @@
+<script id="bootstrapLight"></script>
+<script id="bootstrapNotify"></script>
+<script id="cssMenu"></script>
+
+<script>
+  var dots = "";
+  var dire = window.location.pathname;
+  var firstHalf = dire.split("components/");
+  var secondHalf = firstHalf[1].split("/");
+
+  var doubleDots = doubleDots + "../";
+  var dots = "";
+  // console.log(secondHalf, length);
+  for (var i = 0; i < secondHalf.length - 1; i++) {
+    dots = dots + "../";
+    doubleDots = doubleDots + "../";
+  }
+
+  var bootstrapLight = doubleDots + "assets/js/light-bootstrap-dashboard.js";
+  var bootstrapNotify = doubleDots + "assets/js/bootstrap-notify.js";
+  var cssMenu = doubleDots + "assets/js/cssMenu.js";
+  // var bootstrapDatatable = doubleDots + "assets/js/datatables.min.js";
+
+  //document.getElementById("bootstrapMin").src = bootstrapMin;
+  document.getElementById("bootstrapLight").src = bootstrapLight;
+  document.getElementById("bootstrapNotify").src = bootstrapNotify;
+  // document.getElementById("bootstrapDatatable").src = bootstrapDatatable;
+  document.getElementById("cssMenu").src = cssMenu;
+
+  $(function () {
+    $("#headData").load(dots + "header/header.html");
+    $("#sideBarDiv").load(dots + "sidebar/sidebar.html");
+  });
+</script>

@@ -1,0 +1,40 @@
+{
+  "name": "order-stock-management",
+  "productName": "order-stock-management",
+  "version": "1.0.3",
+  "description": "Order Stock Management by Kalash Infotech",
+  "main": "components/home/homePage.js",
+  "scripts": {
+    "start": "electron components/home/homePage.js",
+    "release": "node ./node_modules/electron-builder/out/cli/cli.js -w --x64 --ia32"
+  },
+  "author": "Kalash Infotech",
+  "license": "MIT",
+  "build": {
+    "appId": "com.kalashinfotech.stockmanagement",
+    "productName": "Stock Management by Kalash Infotech",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "darshan-jain-29",
+        "repo": "kunalSanghviGit"
+      }
+    ],
+    "win": {
+      "icon": "assets/icons/kalash.ico",
+      "target": [
+        "nsis"
+      ]
+    }
+  },
+  "dependencies": {
+    "mysql": "^2.17.1",
+    "mysqldump": "^3.0.0",
+    "node-pdf-printer": "^1.1.0",
+    "pdfkit": "^0.10.0"
+  },
+  "devDependencies": {
+    "electron": "^3.0.6",
+    "electron-builder": "^21.2.0"
+  }
+}

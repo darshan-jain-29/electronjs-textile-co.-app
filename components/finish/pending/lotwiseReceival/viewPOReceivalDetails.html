@@ -1,0 +1,130 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-1">
+                        <label>P. O. No.</label>
+                        <input type="text" class="form-control" placeholder="Bill Number" id="viewBillNumber"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Dt. of Order.</label>
+                        <input type="text" class="form-control" placeholder="Date of Finish Purchase"
+                            id="viewDateOfFinishPurchase" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Delivery Dt.</label>
+                        <input type="text" class="form-control" placeholder="Date of Finish Purchase"
+                            id="viewDateOfPoDelivery" disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="p-L5">Finish Party</label>
+                        <input type="text" class="form-control" placeholder="Party Name" id="viewFinishPartyName"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Broker</label>
+                        <input type="text" class="form-control" placeholder="Broker Name" id="viewBrokerName"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Lot No.</label>
+                        <input type="text" class="form-control" placeholder="Lot Number" id="viewLotNumber" disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>Received Goods Details </b>
+                    </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-3">
+                        <label>Order Qty</label>
+                        <input type="text" class="form-control" placeholder="Order Qty" id="viewTotalOrderQty"
+                            disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label>Rolls Received</label>
+                        <input type="text" class="form-control" placeholder="Rolls Received"
+                            id="viewFinishRollsReceived" disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label>Qty Received</label>
+                        <input type="text" class="form-control" placeholder="Fresh Qty Received"
+                            id="viewFinishQtyReceived" disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label>Filter</label>
+                        <select class="form-control" id="dateFilter" style="display: initial"
+                            onchange="filterByDate(this.id)">
+                        </select>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewFinishPurchaseDetailsTable"
+                            style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-2">Receiving Dt.</th>
+                                    <th class="col-md-4">Quality</th>
+                                    <th class="col-md-2">Shade</th>
+                                    <th class="col-md-2">Roll No.</th>
+                                    <th class="col-md-2">Mtrs.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="viewFinishPurchaseDetailsTableBody">
+                            </tbody>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th>Total</th>
+                                <th>
+                                    <input type="number" id="viewTotalNoOfRolls"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <th>
+                                    <input type="number" id="viewTotalNetWt"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewWeftTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="col-md-12">
+                                    <p id="shrinkageReport" class="errorMessage"></p>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <th class="col-md-12">
+                                    <input id="editButton" type="button" class="btn btn-secondary btn-fill view"
+                                        value="Edit Order"
+                                        onclick="alert('Edit Option is available only for Admin User.. Coming soon...')" />
+                                    <input id="printButton" type="button" class="btn btn-success btn-fill view"
+                                        value="Print" onclick="printInvoiceData()" />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="row rRLM">
+    <div class="col-md-12 p-R5">
+      <div class="card">
+        <div class="col-md-2" style="padding-left:5px">
+          P.O. No.
+          <input type="text" id="viewBillNumber" class="form-control" placeholder="Program No." value="0" disabled />
+        </div>
+        <div class="col-md-2">
+          Order Date
+          <input type="text" class="form-control" id="viewDateOfSalePO" disabled />
+        </div>
+        <div class="col-md-2">
+          Delivery Date
+          <input type="text" class="form-control" id="viewDateOfDelivery" disabled />
+        </div>
+        <div class="col-md-3">
+          Party Name
+          <input type="text" id="viewFinishPartyName" class="form-control" placeholder="Party Name" disabled />
+        </div>
+        <div class="col-md-2">
+          Broker
+          <input type="text" id="viewBrokerName" class="form-control" placeholder="Broker Name" disabled />
+        </div>
+        <div class="col-md-1">
+          Order Qty
+          <input type="number" id="viewOrderQty" class="form-control" placeholder="Order Qty" disabled />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row rRLM">
+    <div class="card">
+      <div class="row rRLM">
+        <div style="text-align: center; font-size: 1.3em;" class="p-T10 p-B10">
+          <b>Pending Orders - New Dispatch Details </b>
+        </div>
+      </div>
+      <div class="row rRLM p-R5">
+        <div class="col-md-12 p-R5">
+          <div class="card">
+            <div class="col-md-2">
+              Invoice No.
+              <input type="text" id="invoiceNo" class="form-control" placeholder="Invoice No." value="0" />
+            </div>
+            <div class="col-md-2">
+              Dispatch Date
+              <input type="date" class="form-control" id="dispatchDate" />
+            </div>
+            <div class="col-md-2">
+              LR No.
+              <input type="text" class="form-control" id="lrNo" placeholder="LR No." />
+            </div>
+            <div class="col-md-2">
+              Transport
+              <select class="form-control" id="transportNames"></select>
+            </div>
+            <div class="col-md-2">
+              Ship To
+              <select class="form-control" id="shippingAddresses"></select>
+            </div>
+            <div class="col-md-2">
+              Haste
+              <input type="text" id="haste" class="form-control" placeholder="Haste" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row rRLM p-R5">
+        <div class="content table-responsive table-full-width">
+          <table class="table table-hover table-striped" id="dispatchPendingTable" style="margin-bottom: 0px;">
+            <thead>
+              <tr>
+                <th class="col-md-2">Quality</th>
+                <th class="col-md-1">Shade No</th>
+                <th class="col-md-1">Color</th>
+                <th class="col-md-1">Condition</th>
+                <th class="col-md-1">Order Qty</th>
+                <th class="col-md-1">Rate/m</th>
+                <!-- <th class="col-md-1">Qty Delivered</th> -->
+                <th class="col-md-1">Pending</th>
+                <th class="col-md-1">Available stock</th>
+                <th class="col-md-1"></th>
+                <th class="col-md-2">Lot No. / Roll No. / Qty</th>
+              </tr>
+            </thead>
+            <tbody id="dispatchPendingTableBody">
+            </tbody>
+            <tfoot>
+              <th class="col-md-2"></th>
+              <th class="col-md-1"></th>
+              <th class="col-md-1"></th>
+              <th class="col-md-1">Total </th>
+              <th class="col-md-1">
+                <input type="number" id="viewTotalOrderQty" class="form-control" value="0" disabled />
+              </th>
+              <th class="col-md-1"> </th>
+              <!-- <th class="col-md-1">
+                <input type="number" id="viewTotalQtyDelivered" class="form-control" value="0" disabled />
+              </th> -->
+              <th class="col-md-1"></th>
+              <th class="col-md-1"></th>
+              <th class="col-md-1">
+                Total Rolls:<br><br>
+                Total Qty:
+              </th>
+              <th class="col-md-2">
+                <input type="number" id="totalDispatchingRolls" class="form-control" value="0" disabled
+                  placeholder="Total Rolls Dispatching" />
+                <input type="number" id="totalDispatchingQty" class="form-control" value="0" disabled
+                  placeholder="Total Qty Dispatching" />
+              </th>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row rRLM">
+    <div class="col-md-12">
+      <div class="form-group" style="text-align: center">
+        <input type="button" class="btn btn-primary btn-fill view" value="Save Dispatch" id="saveDispatchButton"
+          onclick="saveDispatch()" />
+        <!-- <input type="button" class="btn btn-primary btn-fill" value="Save & Print" /> -->
+        <input type="button" class="btn btn-danger btn-fill view" value="Reset" id="resetButton"
+          onclick="window.location.reload()" />
+      </div>
+    </div>
+  </div>
+
+</body>

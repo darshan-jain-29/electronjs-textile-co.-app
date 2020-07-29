@@ -1,0 +1,118 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-4">
+                        <label>Party Name</label>
+                        <input type="text" class="form-control fontBold" placeholder="Party Name" id="viewPartyName"
+                            disabled />
+                    </div>
+                    <div class="col-md-4">
+                        <label class="p-L5">Quality</label>
+                        <input type="text" class="form-control fontBold" placeholder="Quality Name" id="viewQualityName"
+                            disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">Shade</label>
+                        <input type="text" class="form-control fontBold" placeholder="Shade" id="viewShade" disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">Color</label>
+                        <input type="text" class="form-control fontBold" placeholder="Color" id="viewColor" disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">From Date</label>
+                        <input type="text" class="form-control fontBold" placeholder="From Date" id="viewFromDate"
+                            disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">To Date</label>
+                        <input type="text" class="form-control fontBold" placeholder="To Date" id="viewToDate"
+                            disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <div class="col-md-5"></div> -->
+                <!-- <div class="col-md-3"> -->
+                <h4>Detailed Report</h4>
+                <!-- </div>
+                <div class="col-md-2"> -->
+                <!-- <br> -->
+                Total Pending Qty: <label id="masterQtyPending" class="f-s14 fontBold p-L10">0</label> mtrs
+                <!-- </div> -->
+            </div>
+            <!-- div master -->
+            <div id="detailedReportDiv">
+                <!-- outer div -->
+                <div class="card" id="salePoNumberDiv">
+                    <!-- first inner div -->
+                    <div class="row rRLM p-T10 p-B10">
+                        <div class="col-md-2">
+                            <label class="f-s14">P.O. No.:</label>
+                            <label id="salePoNumberPONo" class="f-s14 fontBold">
+                                900090909090
+                            </label>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="f-s14">Party Name:</label>
+                            <label id="salePoNumberPartyName" class="f-s14 fontBold">
+                                Khimesara Silk Mills Pvt Ltd
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="f-s14">P.O. Date:</label>
+                            <label id="salePoNumberPODate" class="f-s14 fontBold">
+                                29/09/1994
+                            </label>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="f-s14">P.O. Qty:</label>
+                            <label id="salePoNumberPOQty" class="f-s14 fontBold">
+                                5000.00
+                            </label>
+                        </div>
+                    </div>
+                    <!-- second inner div -->
+                    <div class="row rRLM p-R5">
+                        <table class="table table-hover table-striped" id="viewfinishSalePODetailsTable"
+                            style="margin-bottom: 0px;">
+                            <thead>
+                                <th class="col-md-1">Sr. No.</th>
+                                <th class="col-md-3">Quality</th>
+                                <th class="col-md-2">Shade No</th>
+                                <th class="col-md-1">Color</th>
+                                <th class="col-md-1">Condition</th>
+                                <th class="col-md-2">Qty Delivered</th>
+                                <th class="col-md-2">Qty Pending</th>
+
+                            </thead>
+                            <tbody id="viewfinishSalePODetailsTableBody">
+                            </tbody>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>Total</th>
+                                <th>
+                                    <input type="number" id="salePoNumberQtyDelivered"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <th>
+                                    <input type="number" id="salePoNumberQtyPending"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

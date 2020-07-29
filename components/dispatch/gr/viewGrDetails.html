@@ -1,0 +1,94 @@
+<html>
+
+<body>
+  <div class="row rRLM">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+          <div class="col-md-2">
+            <label>Invoice No.</label>
+            <input type="text" class="form-control" placeholder="Bill Number" id="viewBillNumber" disabled />
+          </div>
+          <!-- <div class="col-md-2">
+            <label class="p-L5">GR Dt.</label>
+            <input type="text" class="form-control" placeholder="GR Date" id="viewDateOfGR" disabled />
+          </div> -->
+          <div class="col-md-4">
+            <label class="p-L5">Party Name</label>
+            <input type="text" class="form-control" placeholder="Party Name" id="viewPartyName" disabled />
+          </div>
+          <div class="col-md-3">
+            <label class="p-L5">Broker Name</label>
+            <input type="text" class="form-control" placeholder="Broker Name" id="viewBrokerName" disabled />
+          </div>
+          <div class="col-md-2">
+            <label class="p-L5">GR Qty</label>
+            <input type="text" class="form-control" placeholder="GR Qty" id="viewTotalNetQty" disabled />
+          </div>
+
+        </div>
+      </div>
+      <div class="card">
+        <div class="row rRLM">
+          <div style="text-align: center; font-size: 1.3em;">
+            <b>GR Details</b>
+          </div>
+        </div>
+        <div class="row rRLM p-R5">
+          <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped" id="viewGRDetailsTable" style="margin-bottom: 0px;">
+              <thead>
+                <tr>
+                  <th class="col-md-2">GR Date</th>
+                  <th class="col-md-3">Quality Name</th>
+                  <th class="col-md-1">Shade</th>
+                  <th class="col-md-1">Color</th>
+                  <th class="col-md-1">Lot No</th>
+                  <th class="col-md-1">Condition</th>
+                  <th class="col-md-2">Roll No</th>
+                  <th class="col-md-1">GR Qty</th>
+                </tr>
+              </thead>
+              <tbody id="viewGRDetailsTableBody">
+              </tbody>
+              <tfoot>
+                <th class="col-md-2"></th>
+                <th class="col-md-3"></th>
+                <th class="col-md-1"></th>
+                <th class="col-md-1"></th>
+                <th class="col-md-1"></th>
+                <th class="col-md-1">Total</th>
+                <th class="col-md-2">
+                  <input type="number" id="viewTotalGRRolls" class="form-control" value="0" disabled />
+                </th>
+                <th class="col-md-1">
+                  <input type="number" id="viewTotalGRQty" class="form-control" value="0" disabled />
+                </th>
+                <!-- <th class="col-md-2"></th> -->
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="row rRLM p-R5">
+          <div class="content table-responsive table-full-width">
+            <table class="table table-hover table-striped" style="margin-bottom: 0px;">
+              <tfoot>
+                <th class="col-md-12 footerCardEntry">
+                  <input id="editButton" type="button" class="btn btn-secondary btn-fill view" value="Edit Order"
+                    onclick="alert('Edit Option is available only for Admin User.. Coming soon...')" />
+
+                  <input id="printButton" type="button" class="btn btn-success btn-fill view" value="Print"
+                    onclick="printGRData()" />
+                </th>
+              </tfoot>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

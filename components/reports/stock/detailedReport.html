@@ -1,0 +1,91 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-3">
+                        <label>Quality</label>
+                        <input type="text" class="form-control fontBold" placeholder="Quality Name" id="viewQualityName"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Shade</label>
+                        <input type="text" class="form-control fontBold" placeholder="Shade" id="viewShade" disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">Color</label>
+                        <input type="text" class="form-control fontBold" placeholder="Color" id="viewColor" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Condition</label>
+                        <input type="text" class="form-control fontBold" placeholder="Condition" id="viewCondition"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Total Rolls</label>
+                        <input type="text" class="form-control fontBold" placeholder="Total Rolls" id="viewTotalRolls"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Total Quantity</label>
+                        <input type="text" class="form-control fontBold" placeholder="Total Qty" id="viewTotalQty"
+                            disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <!-- <input id="printButton" type="button" class="btn btn-primary btn-fill view m-T25" value="Print"
+                            onclick="printStockData()" /> -->
+                        <!-- onclick="printStockData()" /> -->
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>Available Stock Details </b>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewDetailedReportTable"
+                            style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-3">Quality</th>
+                                    <th class="col-md-2">Shade</th>
+                                    <th class="col-md-1">Color</th>
+                                    <th class="col-md-2">Condition</th>
+                                    <!-- <th class="col-md-2">Lot No.</th> -->
+                                    <th class="col-md-2">Total Rolls</th>
+                                    <th class="col-md-2">Total Qty</th>
+                                    <!-- <th class="col-md-1">Rollwise Details</th> -->
+                                </tr>
+                            </thead>
+                            <tbody id="viewDetailedReportTableBody">
+                            </tbody>
+                            <tfoot>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <!-- <th></th> -->
+                                <th>Grand Total</th>
+                                <th>
+                                    <input type="number" id="viewMasterRollsTotal"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <th>
+                                    <input type="number" id="viewMasterQtyTotal"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <!-- <th></th> -->
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+  <div class="row rRLM">
+    <div class="col-md-12">
+      <div class="row rRLM">
+        <div class="col-md-12 p-R5">
+          <div class="card">
+            <div class="col-md-2" style="padding-left:5px">
+              Dispatch Date.
+              <input type="date" id="editDispatchDate" class="form-control" />
+            </div>
+            <div class="col-md-2">
+              L. R. No.
+              <input type="text" class="form-control" id="editLRNo" placeholder="L.R. No." />
+            </div>
+            <div class="col-md-3">
+              Transport
+              <select class="form-control" id="editTransportNames"></select>
+            </div>
+            <div class="col-md-3">
+              Ship To
+              <select class="form-control" id="editShippingAddresses"></select>
+            </div>
+            <div class="col-md-2">
+              Haste
+              <input type="text" id="editHaste" class="form-control" placeholder="Haste" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row rRLM p-R5">
+        <div class="content table-responsive table-full-width">
+          <table class="table table-hover table-striped" id="editDispatchTable">
+            <thead>
+              <tr>
+                <th class="col-md-2">Quality Name</th>
+                <th class="col-md-2">Shade</th>
+                <th class="col-md-1">Color</th>
+                <th class="col-md-2">Condition</th>
+                <th class="col-md-1">Roll No.</th>
+                <th class="col-md-1">Lot No.</th>
+                <th class="col-md-1">Qty</th>
+                <th class="col-md-1">Rate/m</th>
+                <!-- <th class="col-md-2">Sub. To.</th> -->
+                <th class="col-md-1"></th>
+              </tr>
+            </thead>
+            <tbody id="editDispatchTableBody"></tbody>
+            <tfoot>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th>Total</th>
+                <th>
+                  <input type="text" id="editTotalOrderRolls" class="form-control" placeholder="Rolls" />
+                </th>
+                <th></th>
+                <th>
+                  <input type="text" id="editTotalOrderQty" class="form-control" placeholder="Qty" />
+                </th>
+                <th></th>
+                <th></th>
+                <!-- <th id="editTotalAmount"></th> -->
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+      <div class="row rRLM p-B10">
+        <div class="col-md-12 p-R5">
+          <input type="button" id="updateButton" class="btn btn-success btn-fill view m-T25" value="Update"
+            onclick="updateDispatch()" />
+          <input type="button" id="resetButton" class="btn btn-default btn-fill view m-T25" value="Reset"
+            onclick="resetDispatch()" />
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>

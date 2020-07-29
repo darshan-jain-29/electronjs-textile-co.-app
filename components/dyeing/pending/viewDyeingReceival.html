@@ -1,0 +1,159 @@
+<html>
+
+<body>
+    <div class="row rRLM">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-1">
+                        <label>Bill No.</label>
+                        <input type="text" class="form-control" placeholder="P.O. Number" id="viewPONumber" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Dt. of Pur.</label>
+                        <input type="text" class="form-control" placeholder="Date of P.O. Issue" id="viewDateOfPOIssue"
+                            disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="p-L5">Grey Party</label>
+                        <input type="text" class="form-control" placeholder="Party Name" id="viewYarnPartyName"
+                            disabled />
+                    </div>
+                    <div class="col-md-3">
+                        <label class="p-L5">Dyeing</label>
+                        <input type="text" class="form-control" placeholder="Dyeing Name" id="viewDyeingName"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L5">Broker</label>
+                        <input type="text" class="form-control" placeholder="Broker Name" id="viewBrokerName"
+                            disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="p-L5">Lot No.</label>
+                        <input type="text" class="form-control" placeholder="Lot Number" id="viewLotNumber" value="-"
+                            disabled />
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM">
+                    <div style="text-align: center; font-size: 1.3em;">
+                        <b>Received From Dyeing Details </b>
+                    </div>
+                </div>
+                <div class="row rRLM" style="margin-right: 0px; margin-left: 0px;">
+                    <div class="col-md-1">
+                        <label>Rolls Sent</label>
+                        <input type="text" class="form-control" placeholder="Rolls Sent In Dyeing"
+                            id="viewTotalNoOfRolls" disabled />
+                    </div>
+                    <div class="col-md-1">
+                        <label>Qty Sent</label>
+                        <input type="text" class="form-control" placeholder="Qty Sent In Dyeing" id="viewTotalNetQty"
+                            disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="p-L15 t-C">Rolls Received </label>
+                        <input type="text" class="form-control " placeholder="Rolls Received From Dyeing"
+                            id="viewRollsReceivedFromDyeing" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label>Finish Qty Received</label>
+                        <input type="text" class="form-control" placeholder="Finish Received From Dyeing"
+                            id="viewQtyReceivedFromDyeing" disabled />
+                    </div>
+                    <div class="col-md-2">
+                        <label class="mediumTB">Damage Qty Received</label>
+                        <input type="text" class="form-control " placeholder="Damage Received From Dyeing"
+                            id="viewDamageQtyReceivedFromDyeing" disabled value="0" />
+                    </div>
+                    <div class="col-md-1">
+                        <label class="highTB">Shrinkage</label>
+                        <input type="text" class="form-control " placeholder="Shrinkage From Dyeing"
+                            id="viewShrinkageFromDyeing" disabled value="0" />
+                    </div>
+                    <div class="col-md-1">
+                        <label>From Dyeing</label>
+                        <input type="button" class="btn btn-warning form-control btn-fill receieve"
+                            style="    width: 75%; border: 0px;" title="Click to recieve from Dyeing" id="receiveButton"
+                            value="Receive" data-toggle="modal" data-target="#receivingModal"
+                            onclick="fetchModalData()" />
+                    </div>
+                    <div class="col-md-2">
+                        <label>Filter</label>
+                        <select class="form-control" id="dateFilter" style="display: initial"
+                            onchange="filterByDate(this.id)">
+                        </select>
+                    </div>
+                </div>
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewReceivingDetailsTable"
+                            style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                    <th class="col-md-1">Receiving Dt.</th>
+                                    <th class="col-md-2">Grey Quality</th>
+                                    <th class="col-md-1">Rolls Received</th>
+                                    <th class="col-md-1">Mtrs. Received</th>
+                                    <th class="col-md-2">Finish Quality</th>
+                                    <th class="col-md-4">Shade / Color / Qty</th>
+                                    <th class="col-md-2">Total Mtrs.</th>
+                                </tr>
+                            </thead>
+                            <tbody id="viewReceivingDetailsTableBody">
+                            </tbody>
+                            <tfoot>
+                                <th></th>
+                                <th>Total</th>
+                                <th>
+                                    <input type="number" id="viewRollsReceived"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <th>
+                                    <input type="number" id="viewTotalReceivedMtrs"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                                <th></th>
+                                <th>Shade / Color / Qty</th>
+                                <th>
+                                    <input type="number" id="viewTotalNetMtrs"
+                                        class="form-control inputProgramCardWithColMd" value="0" disabled />
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="row rRLM p-R5">
+                    <div class="content table-responsive table-full-width">
+                        <table class="table table-hover table-striped" id="viewWeftTable" style="margin-bottom: 0px;">
+                            <thead>
+                                <tr>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="col-md-12">
+                                    <p id="shrinkageReport" class="errorMessage"></p>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <th class="col-md-12">
+                                    <input id="allReceivedButton" type="button" class="btn btn-primary btn-fill view"
+                                        value="All Received?" onclick="allReceived()"
+                                        title="Click here if you have received all the goods from dyeing." />
+                                    <!-- <input id="printButton" type="button" class="btn btn-success btn-fill view"
+                                        value="Print" onclick="printInvoiceData()" /> -->
+                                </th>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

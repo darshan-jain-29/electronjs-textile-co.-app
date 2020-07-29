@@ -1,0 +1,33 @@
+<!-- <link href="../../assets/css/cssmenu.css" rel="stylesheet" /> -->
+<link id="cssMenu" href="" rel="stylesheet" />
+<link id="animateMin" href="" rel="stylesheet" />
+<link id="iconCss" href="" rel="stylesheet" />
+<link id="dataTableCss" href="" rel="stylesheet" />
+<link id="customCss" href="" rel="stylesheet" />
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+<meta name="viewport" content="width=device-width" />
+<title>Home Page - Kalash Infotech</title>
+
+<script>
+  // console.log("inside")
+  var dots = "";
+  var loc = window.location.pathname;
+  var temp = loc.split("components/");
+  var temp2 = temp[1].split("/");
+  dots = dots + "../";
+  for (var i = 0; i < temp2.length - 1; i++) dots = dots + "../";
+  var cssMenu = dots + "assets/css/cssmenu.css";
+  var animateMin = dots + "assets/css/animate.min.css";
+  var iconCss = dots + "assets/css/pe-icon-7-stroke.css";
+  var customCss = dots + "assets/css/custom.css";
+  var dataTableCss = dots + "assets/css/datatables.css";
+
+  // console.log(animateMin);
+
+  document.getElementById("cssMenu").href = cssMenu;
+  document.getElementById("animateMin").href = animateMin;
+  document.getElementById("iconCss").href = iconCss;
+  document.getElementById("customCss").href = customCss;
+  document.getElementById("dataTableCss").href = dataTableCss;
+
+</script>

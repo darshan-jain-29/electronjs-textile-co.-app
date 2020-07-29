@@ -1,0 +1,485 @@
+<div class="sidebar-wrapper">
+  <div class="logo">
+    <a style="pointer-events: none;" class="simple-text">
+      Kalash - Infotech
+    </a>
+  </div>
+  <ul class="nav" id="navBar">
+    <!-- Homepage -->
+    <li class="active" id="homePageOptions">
+      <a id="homepageLink" href="#">
+        <i class="pe-7s-home"></i>
+        <p>Home Page</p>
+      </a>
+    </li>
+    <!-- Grey Purchase -->
+    <li class="dropdown" id="greyOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-pen"></i>
+        <p>
+          Grey Purchase
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="newYarnPurchaseLink" href="#" style="color: black">New Grey Purchase</a>
+        </li>
+        <li>
+          <a id="lotNoEntryLink" href="#" style="color: black">Lot No. Entry</a>
+        </li>
+        <li>
+          <a id="allYarnPurchaseLink" href="#" style="color: black">All Grey Purchase</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Dyeing -->
+    <li class="dropdown" id="dyeingOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-loop"></i>
+        <p>
+          Dyeing
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="dyeingPendingLink" href="#" style="color: black">Pending in Dyeing</a>
+        </li>
+        <li>
+          <a id="dyeingReceivalLotNoWiseLink" href="#" style="color: black">All Dyeing Receivals List</a>
+        </li>
+        <!-- <li>
+            <a id="dyeingReceivalBillNoWiseLink" href="#" style="color: black">Dyeing Receivals - Bill No.wise</a>
+          </li> -->
+      </ul>
+    </li>
+    <!-- Finish -->
+    <li class="dropdown" id="finishOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-star"></i>
+        <p>
+          Finish
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="openingStockEntryLink" href="#" style="color: black">Opening Stock Entry</a>
+        </li>
+        <li>
+          <a id="allOpeningStockEntryLink" href="#" style="color: black">All Opening Stock Entries</a>
+        </li>
+        <li>
+          <a id="newFinishPurchaseLink" href="#" style="color: black">New Finish Purchase Entry</a>
+        </li>
+        <li>
+          <a id="allFinishPurchaseLink" href="#" style="color: black">All Finish Purchase Entries</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Stock -->
+    <li class="dropdown" id="stockOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-ribbon"></i>
+        <p>
+          Stock
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="stockMasterLink" href="#" style="color: black">Stock Master</a>
+        </li>
+        <li>
+          <a id="stockMasterLotNoWiseLink" href="#" style="color: black">Stock Master - Lot No.Wise</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Sales -->
+    <li class="dropdown" id="salesOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-rocket"></i>
+        <p>
+          Sales
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="newSalesPOLink" href="#" style="color: black">New Sales P.O. Entry</a>
+        </li>
+        <li>
+          <a id="allSalesPOEntriesLink" href="#" style="color: black">All Sales P.O. Entries</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Dispatch -->
+    <li class="dropdown" id="dispatchOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-mail"></i>
+        <p>
+          Dispatch
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="pendingDispatchLink" href="#" style="color: black">Pending Dispatch</a>
+        </li>
+        <li>
+          <a id="lrNoEntryLink" href="#" style="color: black">LR No. Entry</a>
+        </li>
+        <li>
+          <a id="allDispatchesListLink" href="#" style="color: black">All Dispatches</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Reports -->
+    <li class="dropdown" id="reportsOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-graph3"></i>
+        <p>
+          Reports
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="reportYarnShrinkageLink" href="#" style="color: black">Grey Shrinkage Report</a>
+        </li>
+      </ul>
+    </li>
+    <!-- Utilities -->
+    <li class="dropdown" id="utilitiesOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-light"></i>
+        <p>
+          Utilities
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="utilQSCLink" href="#" style="color: black">Quality/Shade/Color</a>
+        </li>
+        <li>
+          <a id="utilPartyListLink" href="#" style="color: black">Parties List</a>
+        </li>
+        <li>
+          <a id="utilDyeingNamesLink" href="#" style="color: black">Dyeing List</a>
+        </li>
+        <li>
+          <a id="utilBrokerNamesLink" href="#" style="color: black">Brokers List</a>
+        </li>
+        <li>
+          <a id="utilTrasnportNamesLink" href="#" style="color: black">Transport List</a>
+        </li>
+
+      </ul>
+    </li>
+    <!-- Admin -->
+    <!-- <li class="dropdown"> -->
+    <!-- <a href="#" class="dropdown-toggle" data-toggle="dropdown"> -->
+    <!-- <i class="pe-7s-note"></i> -->
+    <!-- <p>Admin<b class="caret"></b></p> -->
+    <!-- </a> -->
+    <!-- <ul class="dropdown-menu"> -->
+    <!-- <li> -->
+    <!-- <a id="Link" href="#" style="color: black">Edit Finish Stock</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!-- <a id="Link" href="#" style="color: black">Edit Grey Stock</a> -->
+    <!-- </li> -->
+    <!-- <li> -->
+    <!-- <a id="Link" href="#" style="color: black">Manage Users</a> -->
+    <!-- </li> -->
+    <!-- </ul> -->
+    <!-- </li> -->
+    <!-- Help -->
+    <li class="dropdown" id="helpOptions">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+        <i class="pe-7s-hourglass"></i>
+        <p>
+          Help
+          <b class="caret"></b>
+        </p>
+      </a>
+      <ul class="dropdown-menu">
+        <li>
+          <a id="Link" href="#" style="color: black">Contact Developer</a>
+        </li>
+      </ul>
+    </li>
+    <!-- <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+          <i class="pe-7s-door-lock"></i>
+          <p>
+            Program
+            <b class="caret"></b>
+          </p>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a id="qualitiesShadesLink" href="#" style="color: black">Qualities & Shades</a>
+          </li>
+          <li>
+            <a id="cardEntryLink" href="#" style="color: black">Card Entry</a>
+          </li>
+          <li>
+            <a id="allCardEntriesLink" href="#" style="color: black">All Card Entries</a>
+          </li>
+          <li>
+            <a id="newProgramLink" href="#" style="color: black">New Program</a>
+          </li>
+          <li>
+            <a id="allProgramsLink" href="#" style="color: black">All Programs Issued</a>
+          </li>
+          <li>
+            <a id="allBeamsLink" href="#" style="color: black">All Beams Issued</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a id="Link" href="#">
+          <i class="pe-7s-display1"></i>
+          <p>Stock Master</p>
+        </a>
+      </li> -->
+    <li class="active-pro">
+      <a onclick="promptUserForLogout()" href="#">
+        <i class="pe-7s-close-circle"></i>
+        <p>Close App</p>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<script>
+  var dots = "";
+  var loc = window.location.pathname;
+  var temp = loc.split("components/");
+  var temp2 = temp[1].split("/");
+  var lastElement = temp2[temp2.length - 1];
+
+  //Homepage
+  var homepageLink = "";
+
+  //Grey Purchase
+  var newYarnPurchaseLink = "";
+  var lotNoEntryLink = "";
+  var allYarnPurchaseLink = "";
+
+  //Dyeing
+  var dyeingPendingLink = "";
+  var dyeingReceivalLotNoWiseLink = "";
+  // var dyeingReceivalBillNoWiseLink = "";
+
+  //Finish
+  var openingStockEntryLink = "";
+  var allOpeningStockEntryLink = "";
+  var newFinishPurchaseLink = "";
+  var allFinishPurchaseLink = "";
+
+  //Stock
+  var stockMasterLink = "";
+  var stockMasterLotNoWiseLink = "";
+
+  //Sales
+  var newSalesPOLink = "";
+  var allSalesPOEntriesLink = "";
+
+  //Sales
+  var pendingDispatchLink = "";
+  var lrNoEntryLink = "";
+  var allDispatchesListLink = "";
+
+  // Reports
+  var reportYarnShrinkageLink = ""
+
+  //Utilities
+  var utilQSCLink = "";
+  var utilPartyListLink = "";
+  var utilDyeingNamesLink = "";
+  var utilBrokerNamesLink = "";
+  var utilTrasnportNamesLink = "";
+
+  //dots = dots + "../";
+  for (var i = 0; i < temp2.length - 1; i++) dots = dots + "../";
+
+  //Homepage
+  homepageLink = dots + "home/homePage.html";
+  //Grey Purchase
+  newYarnPurchaseLink = dots + "yarnpurchase/po/newPO/newPO.html";
+  lotNoEntryLink = dots + "yarnpurchase/lotNo/lotNoEntry.html";
+  allYarnPurchaseLink = dots + "yarnpurchase/po/list/allPO.html";
+
+  //Dyeing
+  dyeingPendingLink = dots + "dyeing/pending/pendingDyeingReceival.html";
+  dyeingReceivalLotNoWiseLink = dots + "dyeing/receivedLotNo/dyeingReceivalLotNoWise.html";
+  // dyeingReceivalBillNoWiseLink = dots + "dyeing/receivedBillNo/dyeingReceivalBillNoWise.html";
+
+  //Finish
+  openingStockEntryLink = dots + "finish/newEntryOpeningStock/openingStockEntry.html";
+  allOpeningStockEntryLink = dots + "finish/listOpeningStock/allOpeningStockEntry.html";
+  newFinishPurchaseLink = dots + "finish/newPurchase/newFinishPurchase.html";
+  allFinishPurchaseLink = dots + "finish/listAllNewPurchase/allNewFinishPurchase.html";
+
+  //Stock
+  stockMasterLink = dots + "stock/list/stockMaster.html";
+  stockMasterLotNoWiseLink = dots + "stock/list/stockMasterLotNoWise.html";
+
+  //Sales
+  newSalesPOLink = dots + "sales/new/newSalesPO.html";
+  allSalesPOEntriesLink = dots + "sales/list/allSalesPOEntries.html";
+
+  //Dispatch
+  pendingDispatchLink = dots + "dispatch/pending/pendingDispatchList.html";
+  lrNoEntryLink = dots + "dispatch/lrNo/lrNoEntry.html";
+  allDispatchesListLink = dots + "dispatch/list/allDispatchesList.html";
+
+  //Utilities
+  utilQSCLink = dots + "utilities/qSC/qSC.html";
+  utilPartyListLink = dots + "utilities/greyPurchaseParty/greyPurchaseParty.html";
+  utilDyeingNamesLink = dots + "utilities/dyeingNames/dyeingNames.html";
+  utilBrokerNamesLink = dots + "utilities/brokerNames/brokerNames.html";
+  utilTrasnportNamesLink = dots + "utilities/transportNames/transportNames.html";
+
+  switch (lastElement) {
+    //Homepage
+    case "homePage.html": homepageLink = lastElement; makeDDActive('homePageOptions'); break;
+    //Grey Purchase
+    case "newPO.html": newYarnPurchaseLink = lastElement; makeDDActive('greyOptions'); break;
+    case "lotNoEntry.html": lotNoEntryLink = lastElement; makeDDActive('greyOptions'); break;
+    case "allPO.html": allYarnPurchaseLink = lastElement; makeDDActive('greyOptions'); break;
+
+    //Dyeing
+    case "pendingDyeingReceival.html": dyeingPendingLink = lastElement; makeDDActive('dyeingOptions'); break;
+    case "dyeingReceivalLotNoWise.html": dyeingReceivalLotNoWiseLink = lastElement; makeDDActive('dyeingOptions'); break;
+    // case "dyeingReceivalBillNoWise.html": dyeingReceivalBillNoWiseLink = lastElement; makeDDActive('dyeingOptions'); break;
+
+    //Finish
+    case "openingStockEntry.html": openingStockEntryLink = lastElement; makeDDActive('finishOptions'); break;
+    case "allOpeningStockEntry.html": allOpeningStockEntryLink = lastElement; makeDDActive('finishOptions'); break;
+    case "newFinishPurchase.html": newFinishPurchaseLink = lastElement; makeDDActive('finishOptions'); break;
+    case "allFinishPurchase.html": allFinishPurchaseLink = lastElement; makeDDActive('finishOptions'); break;
+
+    // Stock
+    case "stockMaster.html": stockMasterLink = lastElement; makeDDActive('stockOptions'); break;
+    case "stockMasterLotNoWise.html": stockMasterLotNoWiseLink = lastElement; makeDDActive('stockOptions'); break;
+
+    // Sales
+    case "newSalesPO.html": newSalesPOLink = lastElement; makeDDActive('salesOptions'); break;
+    case "allSalesPOEntries.html": allSalesPOEntriesLink = lastElement; makeDDActive('salesOptions'); break;
+
+    // Dispatch
+    case "pendingDispatchList.html": pendingDispatchLink = lastElement; makeDDActive('dispatchOptions'); break;
+    case "lrNoEntry.html": lrNoEntryLink = lastElement; makeDDActive('dispatchOptions'); break;
+    case "allDispatchesList.html": allDispatchesListLink = lastElement; makeDDActive('dispatchOptions'); break;
+
+    //Utilities
+    case "qSC.html": utilQSCLink = lastElement; makeDDActive('utilitiesOptions'); break;
+    case "greyPurchaseParty.html": utilPartyListLink = lastElement; makeDDActive('utilitiesOptions'); break;
+    case "dyeingNames.html": utilDyeingNamesLink = lastElement; makeDDActive('utilitiesOptions'); break;
+    case "brokerNames.html": utilBrokerNamesLink = lastElement; makeDDActive('utilitiesOptions'); break;
+    case "transportNames.html": utilTrasnportNamesLink = lastElement; makeDDActive('utilitiesOptions'); break;
+  }
+
+  //Homepage
+  var d1 = document.getElementById("homepageLink")
+  d1.setAttribute('href', homepageLink);
+
+  //Grey Purchase
+  d1 = document.getElementById("newYarnPurchaseLink")
+  d1.setAttribute('href', newYarnPurchaseLink);
+
+  d1 = document.getElementById("lotNoEntryLink")
+  d1.setAttribute('href', lotNoEntryLink);
+
+  d1 = document.getElementById("allYarnPurchaseLink")
+  d1.setAttribute('href', allYarnPurchaseLink);
+
+  //Dyeing  
+  d1 = document.getElementById("dyeingPendingLink")
+  d1.setAttribute('href', dyeingPendingLink);
+
+  d1 = document.getElementById("dyeingReceivalLotNoWiseLink")
+  d1.setAttribute('href', dyeingReceivalLotNoWiseLink);
+
+  // d1 = document.getElementById("dyeingReceivalBillNoWiseLink")
+  // d1.setAttribute('href', dyeingReceivalBillNoWiseLink);
+
+  //Finish 
+  d1 = document.getElementById("openingStockEntryLink")
+  d1.setAttribute('href', openingStockEntryLink);
+
+  d1 = document.getElementById("allOpeningStockEntryLink")
+  d1.setAttribute('href', allOpeningStockEntryLink);
+
+  d1 = document.getElementById("newFinishPurchaseLink")
+  d1.setAttribute('href', newFinishPurchaseLink);
+
+  d1 = document.getElementById("allFinishPurchaseLink")
+  d1.setAttribute('href', allFinishPurchaseLink);
+
+  //Stock
+  d1 = document.getElementById("stockMasterLink")
+  d1.setAttribute('href', stockMasterLink);
+
+  d1 = document.getElementById("stockMasterLotNoWiseLink")
+  d1.setAttribute('href', stockMasterLotNoWiseLink);
+
+  //Sales
+  d1 = document.getElementById("newSalesPOLink")
+  d1.setAttribute('href', newSalesPOLink);
+
+  d1 = document.getElementById("allSalesPOEntriesLink")
+  d1.setAttribute('href', allSalesPOEntriesLink);
+
+  //Dispatch
+  d1 = document.getElementById("lrNoEntryLink")
+  d1.setAttribute('href', lrNoEntryLink);
+
+  d1 = document.getElementById("pendingDispatchLink")
+  d1.setAttribute('href', pendingDispatchLink);
+
+  d1 = document.getElementById("allDispatchesListLink")
+  d1.setAttribute('href', allDispatchesListLink);
+
+  //Utilities
+  d1 = document.getElementById("utilQSCLink")
+  d1.setAttribute('href', utilQSCLink);
+
+  d1 = document.getElementById("utilPartyListLink")
+  d1.setAttribute('href', utilPartyListLink);
+
+  d1 = document.getElementById("utilDyeingNamesLink")
+  d1.setAttribute('href', utilDyeingNamesLink);
+
+  d1 = document.getElementById("utilBrokerNamesLink")
+  d1.setAttribute('href', utilBrokerNamesLink);
+
+  d1 = document.getElementById("utilTrasnportNamesLink")
+  d1.setAttribute('href', utilTrasnportNamesLink);
+
+  function makeDDActive(elem) {
+    var navBar = document.getElementById("navBar");
+    var listItem = navBar.getElementsByTagName("li");
+    //console.log(elem);
+    for (var i = 0; i < listItem.length; i++) {
+      // if (i == 0) listItem[i].setAttribute("class", "");
+      var rowClassName = listItem[i].className.trim();
+      var rowId = listItem[i].id;
+
+      if (rowClassName == 'active-pro') continue;
+      else if (rowClassName == 'active') listItem[i].className = '';
+      else if (rowClassName == 'dropdown active') listItem[i].className = 'dropdown';
+
+      // console.log(rowId);
+      if (rowId == elem) {
+        // console.log(rowId);
+        listItem[i].className = 'dropdown active';
+      }
+    }
+  }
+</script>
