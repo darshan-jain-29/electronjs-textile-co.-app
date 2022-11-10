@@ -34,7 +34,7 @@
     "pdfkit": "^0.10.0"
   },
   "devDependencies": {
-    "electron": "^3.0.6",
+    "electron": "^18.3.7",
     "electron-builder": "^21.2.0"
   }
 }
